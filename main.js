@@ -24,6 +24,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${inputSearch}`)
 `
 })
 })
+.catch((err) => err)
 }
 
 
@@ -54,6 +55,7 @@ let filteredArr = arrIngredient.filter(elem => elem !== "")
 recipeBox.classList.add('show');
        recipeBox.querySelector('button').addEventListener("click", hideBox)
     })
+    .catch((err) => err)
 
     }
  
