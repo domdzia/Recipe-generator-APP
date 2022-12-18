@@ -40,13 +40,13 @@ fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${getID}`)
         arrIngredient.push(getDetails.strIngredient1, getDetails.strIngredient2, getDetails.strIngredient3, getDetails.strIngredient4, getDetails.strIngredient5, getDetails.strIngredient6, getDetails.strIngredient7, getDetails.strIngredient8, getDetails.strIngredient9, getDetails.strIngredient10, getDetails.strIngredient11, getDetails.strIngredient12, getDetails.strIngredient13, getDetails.strIngredient14, getDetails.strIngredient15, getDetails.strIngredient16, getDetails.strIngredient17, getDetails.strIngredient18, getDetails.strIngredient19, getDetails.strIngredient20);
 
 let filteredArr = arrIngredient.filter(elem => elem !== "")
-console.log(filteredArr)
+
         recipeBox.innerHTML = `
         <img class="smaller-pic" src="${getDetails.strMealThumb}" alt="small-food-image">
         <h3>${getDetails.strMeal}</h3>
         <div> You need: </div>
         <ul>
-        <li>${filteredArr}</li>
+        <li> ${filteredArr} </li>
         </ul>
         <button class="close">X</button>
         <p>${getDetails.strInstructions}</p> 
