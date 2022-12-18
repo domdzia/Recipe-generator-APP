@@ -34,7 +34,8 @@ body{
 .search-element, .get-recipe{
     border-radius: 20px 20px 20px 20px;
     background-color: orange;
-    width: 20%;
+    /* max-width: 20%; */
+    padding: 0 0.5rem;
     color: white;
     font-size: 1.3rem;
     text-transform: uppercase;
@@ -98,7 +99,7 @@ img{
     left: 50%;
     transform: translate(-50%, -50%);
     max-height: 600px;
-    min-width: 500px;
+    max-width: 700px;
     display: grid;
     grid-template-areas: 
     "image title button"
@@ -111,7 +112,6 @@ img{
     overflow-y: scroll;
     background-color: orange;
     color: white;
-    /* display: none; */
     visibility: hidden;
 }
 
@@ -139,12 +139,13 @@ div{
 ul{
     grid-area: list;
     list-style: none;
+    line-height: 25px;
 }
 
 p{
     grid-area: text;
-    max-width: 80%;
     margin: 0 auto;
+    line-height: 25px;
 }
 
 .close{
@@ -156,4 +157,25 @@ p{
     border-radius: 50%;
     text-align: center;
     cursor: pointer;
+}
+
+
+@media (max-height: 800vh){
+    .recipe-box{
+        height: 100vh;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .smaller-pic{
+        width: 45%;
+        margin-top: -20px;
+    }
+
+    .close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
 }
