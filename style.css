@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 0 2rem;
+    min-height: 100vh;
+}
+
+.main__title{
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.search-elements{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 4rem;
+}
+
+.search{
+    border: orange 2px solid;
+    border-radius: 20px 20px 20px 20px;
+    height: 45px;
+    width: 60%;
+    padding-left: 20px;
+    font-size: 1.3rem;
+
+}
+
+.search-element, .get-recipe{
+    border-radius: 20px 20px 20px 20px;
+    background-color: orange;
+    width: 20%;
+    color: white;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-element:hover , .get-recipe:hover{
+    background-color: rgb(244, 191, 94);
+}
+
+.suggestion-text{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.show-element{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    padding-top: 3rem;
+    margin-bottom: 20px;
+}
+
+
+.proposition-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(241, 240, 240);
+    border-radius: 20px 20px 20px 20px;
+    width: 400px;
+    height: 430px;
+}
+
+.proposition-box h1{
+    margin-top: 20px;
+}
+
+img{
+    width: 100%;
+    max-height: 60%;
+    border-radius: 20px 20px 0 0;
+}
+
+.get-recipe{
+    width: auto;
+    height: 40px;
+    padding: 0.3rem 1.5rem;
+    margin-top: 50px;
+}
+
+.recipe-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 600px;
+    min-width: 500px;
+    display: grid;
+    grid-template-areas: 
+    "image title button"
+    "image div div"
+    "image list ."
+    "text text .";
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    padding: 2rem 2rem;
+    overflow-y: scroll;
+    background-color: orange;
+    color: white;
+    /* display: none; */
+    visibility: hidden;
+}
+
+.show{
+    visibility: visible;
+
+}
+
+.smaller-pic{
+    grid-area: image;
+    border-radius: 50%;
+}
+
+h3{
+    grid-area: title;
+    padding-bottom: 0.3rem;
+    font-size: 2rem;
+}
+
+div{
+    grid-area: div;
+    font-weight: 700;
+}
+
+ul{
+    grid-area: list;
+    list-style: none;
+}
+
+p{
+    grid-area: text;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.close{
+    grid-area: button;
+    border: none;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
