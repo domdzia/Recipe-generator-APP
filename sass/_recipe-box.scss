@@ -1,0 +1,66 @@
+.recipe-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 600px;
+    max-width: 700px;
+    display: grid;
+    grid-template-areas: 
+    "image title button"
+    "image div div"
+    "image list ."
+    "text text .";
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    padding: 2rem 2rem;
+    overflow-y: scroll;
+    background-color: orange;
+    color: white;
+    visibility: hidden;
+
+    &__smaller-pic{
+        grid-area: image;
+    border-radius: 50%;
+    }
+
+    &__title{
+        grid-area: title;
+    padding-bottom: 0.3rem;
+    font-size: 2rem;
+    }
+
+    &__text{
+        grid-area: div;
+    font-weight: 700;
+    }
+
+    &__list{
+        grid-area: list;
+    list-style: none;
+    line-height: 25px;
+    }
+
+    &__instructions{
+        grid-area: text;
+    margin: 0 auto;
+    line-height: 25px;
+    }
+
+    &__close-button{
+    grid-area: button;
+    border: none;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    }
+
+}
+
+.show{
+    visibility: visible;
+
+}

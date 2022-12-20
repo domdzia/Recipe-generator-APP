@@ -1,0 +1,15 @@
+.buttons{
+    border-radius: 20px 20px 20px 20px;
+    background-color: orange;
+    padding: 0 0.5rem;
+    color: white;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons:hover{
+    background-color: rgb(244, 191, 94);
+}

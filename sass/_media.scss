@@ -1,0 +1,19 @@
+@media (max-height: 800vh){
+    .recipe-box{
+        height: 100vh;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recipe-box__smaller-pic{
+        width: 45%;
+        margin-top: -20px;
+    }
+
+    .recipe-box__close-button{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+}
