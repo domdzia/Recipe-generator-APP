@@ -12,16 +12,18 @@ body{
 .main__title{
     text-align: center;
     padding-top: 2rem;
-}
+ }
 
-.search-elements{
+
+
+ .main__search-elements{
     display: flex;
     justify-content: center;
     gap: 0.5rem;
     margin-top: 4rem;
 }
 
-.search{
+.main__input-search{
     border: orange 2px solid;
     border-radius: 20px 20px 20px 20px;
     height: 45px;
@@ -31,10 +33,9 @@ body{
 
 }
 
-.search-element, .get-recipe{
+.buttons{
     border-radius: 20px 20px 20px 20px;
     background-color: orange;
-    /* max-width: 20%; */
     padding: 0 0.5rem;
     color: white;
     font-size: 1.3rem;
@@ -44,7 +45,7 @@ body{
     cursor: pointer;
 }
 
-.search-element:hover , .get-recipe:hover{
+.buttons:hover{
     background-color: rgb(244, 191, 94);
 }
 
@@ -55,7 +56,7 @@ body{
     font-weight: 600;
 }
 
-.show-element{
+.section-show-box{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -66,7 +67,7 @@ body{
 }
 
 
-.proposition-box{
+.section-show-box__dish{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,17 +77,17 @@ body{
     height: 430px;
 }
 
-.proposition-box h1{
+.section-show-box__title{
     margin-top: 20px;
 }
 
-img{
+.section-show-box__image{
     width: 100%;
     max-height: 60%;
     border-radius: 20px 20px 0 0;
 }
 
-.get-recipe{
+.section-show-box__recipe {
     width: auto;
     height: 40px;
     padding: 0.3rem 1.5rem;
@@ -113,6 +114,7 @@ img{
     background-color: orange;
     color: white;
     visibility: hidden;
+
 }
 
 .show{
@@ -120,35 +122,35 @@ img{
 
 }
 
-.smaller-pic{
+.recipe-box__smaller-pic{
     grid-area: image;
     border-radius: 50%;
 }
 
-h3{
+.recipe-box__title{
     grid-area: title;
     padding-bottom: 0.3rem;
     font-size: 2rem;
 }
 
-div{
+.recipe-box__text{
     grid-area: div;
     font-weight: 700;
 }
 
-ul{
+.recipe-box__list{
     grid-area: list;
     list-style: none;
     line-height: 25px;
 }
 
-p{
+.recipe-box__instructions{
     grid-area: text;
     margin: 0 auto;
     line-height: 25px;
 }
 
-.close{
+.recipe-box__close-button{
     grid-area: button;
     border: none;
     background-color: white;
@@ -168,12 +170,12 @@ p{
         flex-direction: column;
     }
 
-    .smaller-pic{
+    .recipe-box__smaller-pic{
         width: 45%;
         margin-top: -20px;
     }
 
-    .close{
+    .recipe-box__close-button{
         position: absolute;
         top: 30px;
         right: 30px;

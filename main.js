@@ -1,12 +1,12 @@
-const btnSearch = document.querySelector('.search-element');
-const sectionListRecipe = document.querySelector('.show-element');
+const btnSearch = document.querySelector('.main__btn-search');
+const sectionListRecipe = document.querySelector('.section-show-box');
 const recipeBox = document.querySelector('.recipe-box')
 
 // Create list of dishes
 
 function searchRecipe (e) {
 sectionListRecipe.innerHTML = "";
-let inputSearch = document.querySelector('.search').value;
+let inputSearch = document.querySelector('.main__input-search').value;
 
 fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${inputSearch}`)
 .then(response => response.json())
@@ -16,10 +16,10 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${inputSearch}`)
     }
 	data.meals.forEach(elem => { 
 		sectionListRecipe.innerHTML += `
-    <div class="proposition-box" >
-        <img src="${elem.strMealThumb}" alt="food-image">
-        <h1>${elem.strMeal}</h1>
-        <button class="get-recipe" data-id = ${elem.idMeal}>Get recipe</button>
+    <div class="section-show-box__dish" >
+        <img src="${elem.strMealThumb}" alt="food-image" class = "section-show-box__image">
+        <h1 class = "section-show-box__title">${elem.strMeal}</h1>
+        <button class="section-show-box__recipe buttons" data-id = ${elem.idMeal}>Get recipe</button>
     </div>
 `
 })
@@ -30,7 +30,7 @@ fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${inputSearch}`)
 
 // Show more details about dish(recipe)
 function getMealRecipe(e) {
-  if(e.target.classList.contains('get-recipe')){
+  if(e.target.classList.contains('section-show-box__recipe')){
     let getID = Number(e.target.dataset.id);
     let arrIngredient = []
     
@@ -43,14 +43,14 @@ fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${getID}`)
 let filteredArr = arrIngredient.filter(elem => elem !== "")
 
         recipeBox.innerHTML = `
-        <img class="smaller-pic" src="${getDetails.strMealThumb}" alt="small-food-image">
-        <h3>${getDetails.strMeal}</h3>
-        <div> You need: </div>
-        <ul>
-        <li> ${filteredArr} </li>
+        <img class="recipe-box__smaller-pic" src="${getDetails.strMealThumb}" alt="small-food-image">
+        <h3 class = "recipe-box__title">${getDetails.strMeal}</h3>
+        <div class = "recipe-box__text"> You need: </div>
+        <ul class = "recipe-box__list">
+        <li class = ""recipe-box__elements> ${filteredArr} </li>
         </ul>
-        <button class="close">X</button>
-        <p>${getDetails.strInstructions}</p> 
+        <button class="recipe-box__close-button">X</button>
+        <p class = "recipe-box__instructions">${getDetails.strInstructions}</p> 
         `
 recipeBox.classList.add('show');
        recipeBox.querySelector('button').addEventListener("click", hideBox)
