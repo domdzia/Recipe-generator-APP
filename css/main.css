@@ -31,7 +31,7 @@ body {
   padding-left: 2rem;
   font-size: 1.5rem;
   border-radius: 20px 20px 20px 20px;
-  border: orange 2px solid;
+  border: rgb(61, 123, 238) 2px solid;
 }
 
 .suggestion-text {
@@ -57,7 +57,7 @@ body {
   row-gap: 0.5rem;
   padding: 2rem 2rem;
   overflow-y: scroll;
-  background-color: orange;
+  background-color: rgb(31, 106, 217);
   color: white;
   visibility: hidden;
 }
@@ -148,7 +148,7 @@ body {
 
 .buttons {
   border-radius: 20px 20px 20px 20px;
-  background-color: orange;
+  background-color: rgb(31, 106, 217);
   padding: 0 0.5rem;
   color: white;
   font-size: 1.3rem;
@@ -159,7 +159,7 @@ body {
 }
 
 .buttons:hover {
-  background-color: rgb(244, 191, 94);
+  background-color: rgb(12, 14, 162);
 }
 
 @media (max-height: 800vh) {
