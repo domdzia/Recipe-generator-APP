@@ -1,15 +1,13 @@
-.section-show-box{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 3rem;
-    column-gap: 3rem;
-    padding-top: 3rem;
-    margin-bottom: 20px;
+.section-show-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 3rem;
+  column-gap: 3rem;
+  padding-top: 3rem;
+  margin-bottom: 20px;
 
-
-
-&__dish{
+  &__dish {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,22 +15,22 @@
     border-radius: 20px 20px 20px 20px;
     width: 400px;
     height: 430px;
-}
+  }
 
-&__title{
+  &__title {
     margin-top: 20px;
-}
+  }
 
-&__image{
+  &__image {
     width: 100%;
     max-height: 60%;
     border-radius: 20px 20px 0 0;
-}
+  }
 
-&__recipe{
+  &__recipe {
     width: auto;
     height: 40px;
     padding: 0.3rem 1.5rem;
     margin-top: 50px;
-}
+  }
 }
