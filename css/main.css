@@ -31,7 +31,7 @@ body {
   padding-left: 2rem;
   font-size: 1.5rem;
   border-radius: 20px 20px 20px 20px;
-  border: rgb(61, 123, 238) 2px solid;
+  border: rgb(143, 47, 131) 2px solid;
 }
 
 .suggestion-text {
@@ -57,7 +57,7 @@ body {
   row-gap: 0.5rem;
   padding: 2rem 2rem;
   overflow-y: scroll;
-  background-color: rgb(31, 106, 217);
+  background-color: rgb(49, 49, 55);
   color: white;
   visibility: hidden;
 }
@@ -78,6 +78,8 @@ body {
   grid-area: list;
   list-style: none;
   line-height: 25px;
+  border-bottom: 2px solid white;
+  padding-bottom: 15px;
 }
 .recipe-box__instructions {
   grid-area: text;
@@ -147,19 +149,18 @@ body {
 }
 
 .buttons {
-  border-radius: 20px 20px 20px 20px;
-  background-color: rgb(31, 31, 217);
-  padding: 0 0.5rem;
+  border-radius: 20px;
+  background-color: rgb(143, 47, 131);
+  padding: 0 0.8rem;
   color: white;
   font-size: 1.3rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
   border: none;
   cursor: pointer;
 }
 
 .buttons:hover {
-  background-color: rgb(12, 14, 162);
+  background-color: rgb(162, 83, 152);
 }
 
 @media (max-height: 800vh) {

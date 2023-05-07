@@ -66,8 +66,6 @@ function getMealRecipe(e) {
 
       let filteredArr = arrIngredient.filter((elem) => elem !== "");
 
-      console.log(filteredArr);
-
       recipeBox.innerHTML = `
         <img class="recipe-box__smaller-pic" src="${getDetails.strMealThumb}" alt="small-food-image">
         <h3 class = "recipe-box__title">${getDetails.strMeal}</h3>
@@ -75,7 +73,9 @@ function getMealRecipe(e) {
         <ul class = "recipe-box__list">
         <li class = ""recipe-box__elements> ${filteredArr} </li>
         </ul>
+       
         <button class="recipe-box__close-button">X</button>
+        <p>Recipe:</p>
         <p class = "recipe-box__instructions">${getDetails.strInstructions}</p> 
         `;
       recipeBox.classList.add("show");
